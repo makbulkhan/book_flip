@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>CoastWorx.com - Book flip Javascript</title>
+<style type="text/css">
+.buttons {
+	font-family: arial;
+	font-size: 8pt;
+	border-bottom:1px solid #282828; border-right:1px solid #282828; border-top:1px solid #8794A0; border-left:1px solid #8794A0;
+	background-color: #E4E4E4;
+}	
+	
+</style>
+<script type="text/javascript" src="bookflip.js"></script>
+</head>
+<body>
+<div align="center" style="position:relative;width:700px;height:590px;margin:auto;">
+
+		<input type=button class="buttons" value=prev onclick="goprev();">
+		<input type=button class="buttons" value=next onclick="gonext();"> 
+		Page: <select id="flipSelect" style="display:none;"></select> 
+<a href="http://www.coastworx.com/bookflip.php" title="Book Flip - Javascript only">Book Flip</a>		
+
+<br><br>
+ 
+	<div id="myBook" style="display:none;">				
+		<div name="Home" style="background:#055123 url(spongebob300/page0.jpg);color:#ffffff;">
+			<div align=center>
+			<h1>Are You Ready Kids?</h1>
+			</div>
+		</div>
+		<div name="Page 1" style="background:#256974 url('spongebob300/page1.jpg');color:#ffffff;">
+			<div align=center>
+				<h1><a href="http://google.com" target="blank">Aye-Aye Captain.</a></h1>
+				<input type="button" value="Inputs/buttons are ok too" onclick="alert('test');">
+			</div>
+		</div>
+		<div name="Page 2" style="background:#e48953 url('spongebob300/page2.jpg');color:#ffffff;">
+			<div align=center>
+				<h1> I <font color="red">can't</font> hear you.</h1>
+			</div>			
+		</div>
+		<div name="Page 3" style="background:#785165 url('spongebob300/page3.jpg');color:#ffffff;">
+			<div align=center>
+				<h1>Aye-Aye Captain!</h1>
+			</div>
+		</div>	
+		<div style="background:#156489 url('spongebob300/page4.jpg');color:#ffffff;">
+			<div align=center>
+				<h1>OHHHHHHH</h1>
+				<h2>Who lives in a <font color="#E9E53C">pineapple</font> under the <font color="#003AFF">sea?</font></h2>
+			</div>		
+		</div>
+		<div style="background:#000444 url('spongebob300/page5.jpg');color:#ffffff;">
+			<div align=center>
+				<h1><font color="#E9E53C">Sponge Bob</font> Square Pants!</h1>
+			</div>		
+		</div>
+
+		<div style="background:#055123 url('spongebob300/page6.jpg');color:#ffffff;">
+			<div align=center>
+				<h1>Absorbent and <font color="#FFFF00">yellow</font> and pourous is he!</h1>
+			</div>		
+		</div>
+		<div style="background:#256974 url('spongebob300/page7.jpg');color:#ffffff;">
+			<div align=center>
+				<h1><font color="#E9E53C">Sponge Bob</font> Square Pants!</h1>
+			</div>	
+		</div>
+		<div style="background:#e48953 url('spongebob300/page8.jpg');color:#ffffff;">
+			<div align=center>
+				<h1>If nautical nonsense be something you wish!</h1>
+			</div>			
+		</div>
+		<div style="background:#785165 url('spongebob300/page9.jpg');color:#ffffff;">
+			<div align=center>
+				<h1><font color="#E9E53C">Sponge Bob</font> Square Pants!</h1>
+			</div>	
+		</div>	
+		<div style="background:#156489 url('spongebob300/page10.jpg');color:#ffffff;">
+			<div align=center>
+				<h1>Then drop on the <font color="brown">deck</font> and flop like a <font color="green">fish!</font></h1>
+			</div>		
+		</div>
+		<div style="background:#000444 url('spongebob300/page11.jpg');color:#ffffff;">
+			<div align=center>
+				<h1><font color="#E9E53C">Sponge Bob</font> Square Pants!</h1>
+			</div>		
+		</div>	
+	
+		<div style="background:#000444 url('spongebob300/page12.jpg');color:#ffffff;">
+			<div align=center>
+				<h1><font color="#E9E53C">Ready?</font></h1>
+			</div>		
+		</div>	
+
+		<div style="background:#000444 url('spongebob300/page13.jpg');color:#ffffff;">
+			<div align=center>
+				<h1><i>Sponge Bob Square Pants</i></h1><br><br><br>
+				<h2><i><font color="#002295">Sponge Bob Square Pants</font></i></h2>
+				<h2><i><font color="#002295">Sponge Bob Square Pants</font></i></h2>
+			</div>		
+		</div>
+		<div style="background:#000444 url('spongebob300/page14.jpg');color:#ffffff;">
+			<div align=center>
+				<h1><font color="#ffffff">Sponge Bob</font></h1>
+				<h1><font color="#E9E53C">Square Paaaaannttss!!!</font></h1>
+			</div>		
+		</div>		
+		<div style="background:#000444 url('spongebob300/page0.jpg');color:#ffffff;">
+			<div align=center>
+				<h1><font color="#E9E53C"> HA HA HA HA !!!!</font></h1>
+			</div>
+		</div>
+	</div>
+
+	
+<br>
+</div>
+<script type="text/javascript">
+
+/****************************************************************************
+//** Software License Agreement (BSD License)
+//** Book Flip slideshow script- Copyright 2008, Will Jones (coastworx.com)
+//** This Script is wholly developed and owned by CoastWorx.com 
+//** Copywrite: http://wwww.coastworx.com/
+//** You are free to use this script so long as this coptwrite notice 
+//** stays intact in its entirety
+//** You are NOT Permitted to claim this script as your own or
+//** use this script for commercial purposes without the express
+//** permission of CoastWorx Technologies!
+//** Full credit to Scott Schiller (schillmania.com) for soundManager
+//***************************************************************************/
+var myPageW=300; //page width
+var myPageH=361; //page height
+var pageBorderWidth=1; //adjust border width
+var pageBorderColor="#000000"; //border color
+var pageBorderStyle="solid"; //border style eg. solid, dashed or dotted.
+
+var pSpeed=20; //page speed, 20 is best for Opera browser. Less is faster
+var pSound=false; //change to true for flip sound effect, if true, install SoundManager from schillmania.com
+
+var showBinder=false; //change to false for no binder
+var binderImage = "parchmentring2.gif"; //location of center binder
+var binderWidth = 20; //width of center binder image
+var numPixelsToMove = 20;//number of pixels to move per frame, more is faster but less smooth
+
+//You must create the place holder for the dropdown on this page with an id attribute, eg. <select id="flipSelect" style="display:none;"></select>
+var selectNavigation=true; //this builds a drop down list of pages for auto navigation.
+allowPageClick=true; //allow clicking page directly
+doIncrementalAutoFlip = false; //set this to true if you want to flip to selected page incrementally(ie.see each page turn)
+
+ini();
+
+</script>	
+	
+</body>
+</html>
